@@ -25,23 +25,23 @@ int main(){
 	for(int i = 0; i < 3; i++){
 		scanf("%f %f",&len[i][0],&len[i][1]);
 	}
-	mid = ((len[0][0] + len[0][1])) / 2; //빨간점 중앙 
-	wid = check(wid,mid); //전체 길이 구하기 
-	for(int i = 1; i < 3; i++){ //좌표수정 
+	mid = ((len[0][0] + len[0][1])) / 2;  
+	wid = check(wid,mid);  
+	for(int i = 1; i < 3; i++){ 
 		for(int j = 0; j < 2; j++){
 			len[i][j] = change(len[i][j] - mid);
 		}
 	}
 	if(len[1][0] != len[1][1]){
-		mid = ((len[1][0] + len[1][1])) / 2; //파란점 중앙 
-		wid = check(wid,mid); //전체 길이 구하기 
-		for(int i = 2; i < 3; i++){ //좌표수정 
+		mid = ((len[1][0] + len[1][1])) / 2; 
+		wid = check(wid,mid); 
+		for(int i = 2; i < 3; i++){ 
 			for(int j = 0; j < 2; j++){
 				len[i][j] = change(len[i][j] - mid);
 			}
 		}
 	}
-	mid = ((len[2][0] + len[2][1])) / 2; //파란점 중앙 
-	wid = check(wid,mid); //전체 길이 구하기 
+	mid = ((len[2][0] + len[2][1])) / 2; 
+	wid = check(wid,mid); 
 	printf("%.1f",wid);
 }
