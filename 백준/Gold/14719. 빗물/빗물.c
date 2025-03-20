@@ -34,7 +34,7 @@ int main(){
                             break;
                         }
                     }
-                    if (num < w && num != m + 1) {  // num이 w를 벗어나지 않도록 조건 수정
+                    if (num < w && num != m + 1) { 
                         for (int k = m + 1; k < num; k++) {
                             room[i][k] = 2;
                         }
