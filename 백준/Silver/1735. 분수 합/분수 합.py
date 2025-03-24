@@ -1,0 +1,11 @@
+f_c, f_m = map(int,input().split())
+s_c, s_m = map(int,input().split())
+m_c = (f_m*s_c) + (s_m * f_c)
+m_m = f_m*s_m
+a = max(m_m,m_c)
+b = min(m_m,m_c)
+while(a % b != 0):
+    temp = b
+    b = a % b
+    a = temp
+print(m_c//b,m_m//b,sep=" ")
