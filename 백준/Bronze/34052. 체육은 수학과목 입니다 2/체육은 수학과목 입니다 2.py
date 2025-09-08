@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+print("Yes" if a+b+c+d+300 <= 1800 else "No")
